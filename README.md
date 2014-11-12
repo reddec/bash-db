@@ -1,7 +1,12 @@
 bash-db
 =======
 
-Very simple Key-Value database on bash script
+Very simple Key-Value database on bash script. Depends on pre-installed software only (tested on Ubuntu 14.04 LTS):
+* sed
+* bash
+* grep
+* base64
+* xargs
 
 Install
 =======
