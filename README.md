@@ -22,43 +22,56 @@ Usage
 
 Methods:
 
-* `put` - Insert or update record.
- * **key** (required) - Record unique key. Can be used any value (also spaces if value in bracets)
- * **value** (optional) - Record value.  Can be used any value (also spaces if value in bracets). If value not set, STDIN will be used.
-* `get` - Get value of record by key
- * **key** (required) - Record unique key. Can be used any value (also spaces if value in bracets)
-* `list` - Get all keys in database
-* `delete` - Delete record by key
- * **key** (required) - Record unique key. Can be used any value (also spaces if value in bracets)
+### PUT
 
-Examples
-========
+Insert or update record.
 
-Put some value
+| Arg               | Description  |
+|-------------------| -------------|
+| `key` (required)  | Unique key. Can be used any value (also spaces if value in bracets)
+| `value` (optional)| Value of record.  Can be used any value (also spaces if value in bracets). If value not set, STDIN will be used.
+
+#### Example:
+
 ```bash
 db put test.db name 'Red Dec'
 ```
 
-Get
+### GET
+
+Get value of record by key
+
+| Arg               | Description  |
+|-------------------| -------------|
+| `key` (required)  | Unique key. Can be used any value (also spaces if value in bracets)
+
+#### Example:
 
 ```bash
 db get test.db name
 ```
 
-Update
+### LIST
 
-```bash
-db put test.db name 'New Red Dec'
-```
+Get all keys in database
 
-List
+**No arguments**
 
+#### Example:
 
 ```bash
 db list test.db
 ```
 
-Delete
+### DELETE
+
+Delete record by key
+
+| Arg               | Description  |
+|-------------------| -------------|
+| `key` (required)  | Unique key. Can be used any value (also spaces if value in bracets)
+
+#### Example:
 
 ```bash
 db delete test.db name
