@@ -16,7 +16,7 @@ list () {
 # Get last added value 
 last () {
     db=$1;
-    sed -nr "$s/(.*)\ (.*$)/\2/p;d" $db | base64 -d
+    sed -nr "\$s/(.*)\ (.*$)/\2/p;d" $db | base64 -d
 }
 
 # Put or updated record
