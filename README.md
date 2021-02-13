@@ -63,6 +63,18 @@ Get all keys in database
 db list test.db
 ```
 
+### LAST
+
+Get the value of the last added record
+
+**No arguments**
+
+#### Example:
+
+```bash
+db last test.db
+```
+
 ### DELETE
 
 Delete record by key

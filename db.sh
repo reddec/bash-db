@@ -13,6 +13,12 @@ list () {
    sed -nr "s/(^[^\ ]+)\ (.*$)/\1/p" $db | xargs -n 1 sh -c 'echo `echo -n $0 | base64 -d`'
 }
 
+# Get last added value 
+last () {
+    db=$1;
+    sed -nr "\$s/(.*)\ (.*$)/\2/p;d" $db | base64 -d
+}
+
 # Put or updated record
 put () {
     db=$1;
